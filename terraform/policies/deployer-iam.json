@@ -1,0 +1,83 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "LambdaPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "lambda:*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "APIGatewayPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "apigateway:*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "IAMPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateRole",
+                "iam:DeleteRole",
+                "iam:AttachRolePolicy",
+                "iam:DetachRolePolicy",
+                "iam:PassRole",
+                "iam:GetRole",
+                "iam:ListRolePolicies",
+                "iam:TagRole",
+                "iam:ListAttachedRolePolicies",
+                "iam:ListInstanceProfilesForRole"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "CloudWatchLogsPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents",
+                "logs:DescribeLogGroups",
+                "logs:DescribeLogStreams",
+                "logs:DeleteLogGroup",
+                "logs:ListLogDeliveries",
+                "logs:DeleteLogDelivery",
+                "logs:TagResource",
+                "logs:PutRetentionPolicy",
+                "logs:ListTagsForResource"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "S3PermissionsForLambda",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:DeleteObject",
+                "s3:ListBucket"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "TerraformStateBucketPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "s3:CreateBucket",
+                "s3:PutBucketAcl",
+                "s3:PutBucketPolicy",
+                "s3:GetBucketPolicy",
+                "s3:DeleteBucket",
+                "s3:DeleteObject",
+                "s3:ListBucket",
+                "s3:GetObject",
+                "s3:PutObject"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
